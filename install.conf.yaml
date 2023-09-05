@@ -1,0 +1,14 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.vimrc: vimrc
+
+- create:
+    - ~/dotbot/downloads
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
