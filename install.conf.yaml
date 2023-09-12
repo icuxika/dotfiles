@@ -6,6 +6,8 @@
 
 - link:
     ~/.vimrc: vimrc
+    ~/.tmux.conf: tmux.conf
+    ~/.config/nvim: nvim
 
 - create:
     - ~/dotbot/downloads
