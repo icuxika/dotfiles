@@ -1,4 +1,14 @@
 local dap = require('dap')
+
+-- dap.defaults.fallback.terminal_win_cmd = function ()
+--   local Terminal = require("toggleterm.terminal")
+--   local newTerm = Terminal:new({
+--     clear_env = true
+--   })
+--   newTerm:toggle()
+--   return newTerm.bufnr, newTerm.window
+-- end
+
 dap.adapters.codelldb = {
   type = 'server',
   port = "${port}",

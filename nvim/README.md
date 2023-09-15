@@ -1,3 +1,9 @@
+### insert模式按下<leader>卡顿
+> 通过下述命令分析哪些快捷键使用了<leader>键并允许在insert模式下使用
+```
+:verbose imap <leader>
+```
+
 #### 重新载入文件 
 ```
 :so

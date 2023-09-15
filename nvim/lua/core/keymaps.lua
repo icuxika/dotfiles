@@ -38,6 +38,12 @@ keymap.set({"i", "n", "v"}, "<F8>", "<cmd>lua require'dap'.step_into()<CR>")
 keymap.set({"i", "n", "v"}, "<F9>", "<cmd>lua require'dap'.step_out()<CR>")
 keymap.set({"i", "n", "v"}, "<F10>", "<cmd>lua require'dap'.run_last()<CR>")
 
+-- cmake
+keymap.set("n", "<leader>cpc", "<cmd>CMakeSelectConfigurePreset<CR>")
+keymap.set("n", "<leader>cpb", "<cmd>CMakeSelectBuildPreset<CR>")
+keymap.set("n", "<leader>cb", "<cmd>CMakeBuild<CR>")
+keymap.set("n", "<leader>cla", "<cmd>CMakeLaunchArgs<CR>")
+keymap.set("n", "<leader>cr", "<cmd>CMakeRun<CR>")
 
 -- nvim-lspconfig start ----------------------------------------
 -- Global mappings.
@@ -63,14 +69,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', opts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
     vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
-    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
-    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
-    vim.keymap.set('n', '<space>wl', function()
+    vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
+    vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
+    vim.keymap.set('n', '<leader>wl', function()
       print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     end, opts)
-    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
-    vim.keymap.set('n', '<space>rn', '<cmd>Lspsaga rename<CR>', opts)
-    vim.keymap.set({ 'n', 'v' }, '<space>ca', '<cmd>Lspsaga code_action<CR>', opts)
+    vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, opts)
+    vim.keymap.set('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', opts)
+    vim.keymap.set({ 'n', 'v' }, '<leader>ca', '<cmd>Lspsaga code_action<CR>', opts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
     vim.keymap.set('n', 'gf', function()
       vim.lsp.buf.format { async = true }

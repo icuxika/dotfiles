@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
   use "wbthomason/packer.nvim"
   -- 主题
   use 'folke/tokyonight.nvim'
+  use "hardhackerlabs/theme-vim"
   -- 图标
   use 'nvim-tree/nvim-web-devicons'
   -- 状态栏
@@ -59,9 +60,9 @@ return require('packer').startup(function(use)
   -- 左则git提示
   use "lewis6991/gitsigns.nvim"
   -- 文件检索
+  use "nvim-lua/plenary.nvim"
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    'nvim-telescope/telescope.nvim', tag = '0.1.1'
   }
   -- 浮窗控制台
   use 'voldikss/vim-floaterm'
@@ -74,6 +75,11 @@ return require('packer').startup(function(use)
   use "sindrets/diffview.nvim"
   -- nvim tmux键位协调
   use "alexghergh/nvim-tmux-navigation"
+  -- 控制台
+  use "akinsho/toggleterm.nvim"
+  -- cmake
+  use "Civitasv/cmake-tools.nvim"
+
   -- 自动安装packer.nvim后安装以上插件
   -- Put this at the end after all plugins
   if packer_bootstrap then
