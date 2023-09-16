@@ -9,6 +9,10 @@
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
     ~/.config/nvim: nvim
+    ~/.zsh: zsh
+    ~/.zshrc: zshrc
+    ~/.zimrc: zimrc
+    ~/.p10k.zsh: p10k.zsh
 
 - create:
     - ~/dotbot/downloads
