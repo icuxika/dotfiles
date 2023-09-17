@@ -18,4 +18,5 @@ require('plugins.telescope')
 require('plugins.tmux')
 require('plugins.toggleterm')
 require('plugins.cmake-tools')
+require('plugins.rust-tools')
 

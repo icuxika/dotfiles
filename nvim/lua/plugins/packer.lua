@@ -79,6 +79,8 @@ return require('packer').startup(function(use)
   use "akinsho/toggleterm.nvim"
   -- cmake
   use "Civitasv/cmake-tools.nvim"
+  -- rust
+  use 'simrat39/rust-tools.nvim'
 
   -- 自动安装packer.nvim后安装以上插件
   -- Put this at the end after all plugins
