@@ -1,6 +1,1 @@
-# ftime 'Elapsed Time: %E s' command
-ftime()
-{
- TIMEFMT=$1
- time $2
-}
+export TIMEFMT=$'\nElapsed Time:\ntotal\t%*E\nuser\t%U\nsystem\t%S'
