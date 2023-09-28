@@ -14,7 +14,7 @@ source ~/.zsh/zim_settings.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # -----------------
 
-export HIST_STAMPS="yyyy-mm-dd"
+#export HIST_STAMPS="yyyy-mm-dd"
 source ~/.zsh/history.zsh
 
 source ~/.zsh/functions.zsh
@@ -23,11 +23,9 @@ source ~/.zsh/alias.zsh
 # -----------------
 # macOS config
 # -----------------
-if [[ -f ~/.bash_profile ]] {
-  source ~/.bash_profile
-}
-if [[ -f ~/.zsh/functions_macos.zsh ]] {
-  source ~/.zsh/functions_macos.zsh
-}
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [[ $(uname) = "Darwin" ]]; then
+ [ -f ~/.bash_profile ] && source ~/.bash_profile
+ [ -f ~/.zsh/functions_macos.zsh ] && source ~/.zsh/functions_macos.zsh
+ [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi
 # -----------------
