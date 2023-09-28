@@ -20,3 +20,14 @@ source ~/.zsh/history.zsh
 source ~/.zsh/functions.zsh
 source ~/.zsh/alias.zsh
 
+# -----------------
+# macOS config
+# -----------------
+if [[ -f ~/.bash_profile ]] {
+  source ~/.bash_profile
+}
+if [[ -f ~/.zsh/functions_macos.zsh ]] {
+  source ~/.zsh/functions_macos.zsh
+}
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# -----------------
