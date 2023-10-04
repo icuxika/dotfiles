@@ -33,8 +33,6 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   -- 文档树
   use 'nvim-tree/nvim-tree.lua'
-  -- ctrl + hjkl 切换左下上右
-  use 'christoomey/vim-tmux-navigator'
   -- 语法高亮
   use 'nvim-treesitter/nvim-treesitter'
   -- 配合treesitter，不同括号颜色区分

@@ -1,4 +1,4 @@
-require("toggleterm").setup{
+require("toggleterm").setup {
   size = function(term)
     if term.direction == "horizontal" then
       return 15
@@ -12,13 +12,17 @@ require("toggleterm").setup{
   insert_mappings = true,
   terminal_mappings = true,
   persist_size = true,
-  direction = 'horizontal',
+  direction = 'float',
+  close_on_exit = true,
   shell = vim.o.shell,
+  float_opts = {
+    border = 'double'
+  }
 }
 
-local Terminal  = require('toggleterm.terminal').Terminal
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
-
+-- lazygit
+local Terminal = require('toggleterm.terminal').Terminal
+local lazygit  = Terminal:new({ cmd = "lazygit", direction = "float", hidden = true })
 function _lazygit_toggle()
   lazygit:toggle()
 end
