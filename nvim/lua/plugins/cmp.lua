@@ -26,7 +26,7 @@ cmp.setup({
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-e>'] = cmp.mapping.abort(),  -- 取消补全，esc也可以退出
+    ['<C-e>'] = cmp.mapping.abort(), -- 取消补全，esc也可以退出
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
 
     ["<Tab>"] = cmp.mapping(function(fallback)
@@ -42,9 +42,9 @@ cmp.setup({
         fallback()
       end
     end, {
-        "i",
-        "s",
-      }),
+      "i",
+      "s",
+    }),
 
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -55,9 +55,9 @@ cmp.setup({
         fallback()
       end
     end, {
-        "i",
-        "s",
-      }),
+      "i",
+      "s",
+    }),
   }),
 
   -- 这里重要
@@ -66,6 +66,6 @@ cmp.setup({
     { name = 'luasnip' },
     { name = 'path' },
   }, {
-      { name = 'buffer' },
-    })
+    { name = 'buffer' },
+  })
 })

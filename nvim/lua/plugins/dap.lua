@@ -14,7 +14,7 @@ dap.adapters.codelldb = {
   port = "${port}",
   executable = {
     command = 'codelldb',
-    args = {"--port", "${port}"},
+    args = { "--port", "${port}" },
   }
 }
 
