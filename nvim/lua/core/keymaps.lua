@@ -68,7 +68,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     local opts = { buffer = ev.buf }
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-    vim.keymap.set('n', 'pd', '<cmd>Lspsaga peek_definition<CR>', opts)
+    vim.keymap.set('n', '<leader>gd', '<cmd>Lspsaga peek_definition<CR>', opts)
     vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', opts)
     vim.keymap.set('n', 'gi', '<cmd>Lspsaga finder imp<CR>', opts)
     vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
