@@ -8,19 +8,19 @@ require("mason").setup({
   }
 })
 
+local servers = { "lua_ls", "clangd", "cmake" }
+
 require("mason-lspconfig").setup {
-  ensure_installed = { "lua_ls", "clangd", "cmake" },
+  ensure_installed = servers
 }
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local lspconfig = require("lspconfig")
-lspconfig.util.default_config = vim.tbl_extend(
-  "force",
-  lspconfig.util.default_config,
-  {
-    capabilities = capabilities
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local lspconfig = require('lspconfig')
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    capabilities = capabilities,
   }
-)
+end
 
 lspconfig.lua_ls.setup {}
 
