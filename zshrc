@@ -29,3 +29,9 @@ if [[ $(uname) = "Darwin" ]]; then
  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 fi
 # -----------------
+# -----------------
+# Linux config
+# -----------------
+if [[ $(uname) = "Linux" ]]; then
+ [ -f ~/.bash_profile ] && source ~/.bash_profile
+fi
